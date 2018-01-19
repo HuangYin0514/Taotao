@@ -1,5 +1,6 @@
 package com.taotao.fastdfs;
 
+import com.taotao.utils.FastDFSClient;
 import org.csource.fastdfs.*;
 import org.junit.Test;
 
@@ -24,6 +25,14 @@ public class TestFastDFS {
         for (String string : strings) {
             System.out.println(string);
         }
+
+    }
+
+    @Test
+    public void testFastDfsClient() throws Exception{
+        FastDFSClient fastDFSClient = new FastDFSClient("C:/Users/10713/Documents/ideaFile/BS/taotao-manager-web/src/main/resources/resource/client.conf");
+        String string = fastDFSClient.uploadFile("C:/Users/10713/Pictures/DailyBeautifulPic/2018_1_15_Bing_de-DE.jpg");
+        System.out.println(string);
 
     }
 }
