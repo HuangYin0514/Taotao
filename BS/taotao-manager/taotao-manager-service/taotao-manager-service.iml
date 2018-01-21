@@ -3,10 +3,10 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="ApplicationContext Trans" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resource/spring/applicationContext-trans.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resource/spring/applicationContext-dao.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resource/spring/applicationContext-service.xml</file>
+        <fileset id="fileset2" name="ApplicationContext Trans" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-trans.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/applicationContext-service.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -37,7 +37,6 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.taotao:taotao-manager-pojo:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="taotao-manager-dao" />
     <orderEntry type="module" module-name="taotao-manager-pojo" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />
