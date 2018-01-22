@@ -17,7 +17,7 @@ public class UpdateContentCategory {
         TaotaoResult result = contentCategoryService.updateContentCategory((long) 100, "test");
         System.out.println(result);
     }
- */
+
     @Test
     public void TestdeleteContentCategory(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/*.xml");
@@ -25,4 +25,5 @@ public class UpdateContentCategory {
         TaotaoResult result = contentCategoryService.deleteContentCategory((long) 98);
         System.out.println(result);
     }
+ */
 }

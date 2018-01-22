@@ -9,12 +9,17 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>taotao-portal-web</artifactId>
     <packaging>war</packaging>
-    <name>taotao-portal-web Maven Webapp</name>
+    <name>taotao-portal-web</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
             <groupId>com.taotao</groupId>
             <artifactId>taotao-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao-content-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Spring -->
