@@ -29,14 +29,14 @@ public class ItemController {
 
     @RequestMapping("/item/list")
     @ResponseBody
-    public EasyUIDataGridResult itemList(Integer page,Integer rows){
+    public EasyUIDataGridResult itemList(Integer page, Integer rows){
         EasyUIDataGridResult result = itemService.getItemList(page, rows);
         return result;
     }
 
     @RequestMapping(value = "/item/save",method = RequestMethod.POST)
     @ResponseBody
-    public TaotaoResult addItem(TbItem item,String desc){
+    public TaotaoResult addItem(TbItem item, String desc){
         TaotaoResult result = itemService.addItem(item, desc);
         return result;
     }

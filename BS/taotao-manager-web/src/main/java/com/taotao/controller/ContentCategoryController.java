@@ -30,7 +30,7 @@ public class ContentCategoryController {
 
     @RequestMapping("/content/category/create")
     @ResponseBody
-    public TaotaoResult addContentCategory(Long parentId,String name){
+    public TaotaoResult addContentCategory(Long parentId, String name){
         TaotaoResult result = contentCategoryService.addContentCategory(parentId, name);
         return result;
     }

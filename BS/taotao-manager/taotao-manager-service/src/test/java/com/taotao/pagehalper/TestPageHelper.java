@@ -1,6 +1,5 @@
 package com.taotao.pagehalper;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.mapper.TbItemMapper;

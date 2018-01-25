@@ -20,7 +20,7 @@ public class ContentController {
 
     @RequestMapping("/content/query/list")
     @ResponseBody
-    public EasyUIDataGridResult contentList(Integer page,Integer rows){
+    public EasyUIDataGridResult contentList(Integer page, Integer rows){
         EasyUIDataGridResult result = contentService.getContentList(page, rows);
         return result;
     }

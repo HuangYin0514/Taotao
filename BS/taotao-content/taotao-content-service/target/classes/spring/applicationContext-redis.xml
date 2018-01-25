@@ -8,7 +8,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-
+    <!--配置注解驱动（如果配置包扫描器则自动开启该功能）-->
  <!--   <context:annotation-config/>-->
 	<!--redis单机版-->
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
