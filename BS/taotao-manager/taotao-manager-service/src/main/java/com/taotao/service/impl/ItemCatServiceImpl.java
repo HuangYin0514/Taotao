@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Service
 public class ItemCatServiceImpl implements ItemCatService {
+
     @Autowired
     private TbItemCatMapper itemCatMapper;
 
