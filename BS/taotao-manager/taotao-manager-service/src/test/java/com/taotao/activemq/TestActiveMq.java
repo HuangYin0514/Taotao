@@ -1,0 +1,154 @@
+package com.taotao.activemq;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.command.ActiveMQTextMessage;
+import org.junit.Test;
+
+import javax.jms.*;
+
+public class TestActiveMq {
+
+    //queue
+    //Producer
+    @Test
+    public void testQueueProducer() throws Exception{
+        //1创建一个连接工厂对象ConnectionFactory对象，需要指定mq服务的ip及端口
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.25.183:61616");
+        //2使用connectionFactory创建一个连接Connection对象
+        Connection connection = connectionFactory.createConnection();
+        //3开启连接。调用Connection对象的start方法
+        connection.start();
+        //4使用Connection对象创建一个Session对象
+        //第一个参数是是否开启是事物，一般不使用食物。保证数据的最终一致，可以使用消息队列实现
+        //如果的哥参数为true，第二个参数自动忽略。如果不开启事务false。第二个参数为消息的应答模式。一般自动应答就可以。
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        //5使用Session对象创建一个Destination对象，两种形式queue、topic。想在影噶i使用queue
+        //参数就是消息队列的名称
+        Queue queue = session.createQueue("test-queue");
+        //6使用Seesin对象创建一个Producer对象
+        MessageProducer producer = session.createProducer(queue);
+        //7创建一个TestMessage对象
+        /*ActiveMQTextMessage textMessage = new ActiveMQTextMessage();
+        textMessage.setText("hello activemq");*/
+        TextMessage textMessage = session.createTextMessage("hello activemq111");
+        //8发送消息
+        producer.send(textMessage);
+        //关闭资源
+        producer.close();
+        session.close();
+        connection.close();
+    }
+
+    @Test
+    public void testQueueConsumer() throws Exception{
+        //创建一个连接工厂对象
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.25.183:61616");
+        //使用连接工厂对象创建一个连接
+        Connection connection = connectionFactory.createConnection();
+        //开启连接
+        connection.start();
+        //使用连接对象创建一个Session对象
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        //使用Seesion创建一个Destination，Destination应该和消息的发送端一致
+        Queue queue = session.createQueue("test-queue");
+        //使用Session创建一个Consumer对象
+        MessageConsumer consumer = session.createConsumer(queue);
+        //向Consumer对象中设置一个MessageListener对象，用来接收消息
+        consumer.setMessageListener(new MessageListener() {
+            @Override
+            public void onMessage(Message message) {
+                //取消息的内容
+                if (message instanceof TextMessage) {
+                    TextMessage textMessage = (TextMessage) message;
+                    try {
+                        String text = textMessage.getText();
+                        //打印消息内容
+                        System.out.println(text);
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
+        //系统等待接收消息
+        /*while (true) {
+            Thread.sleep(100);
+        }*/
+        System.in.read();
+        //关闭资源
+        consumer.close();
+        session.close();
+        connection.close();
+    }
+
+    //topic
+    //Produce
+    @Test
+    public void testTopicProduce() throws Exception{
+        //创建一个连接工厂对象
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.25.183:61616");
+        //创建连接
+        Connection connection = connectionFactory.createConnection();
+        //开启连接
+        connection.start();
+        //创建Session
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        //创建Destination，应该使用topic
+        Topic topic = session.createTopic("test-topic");
+        //创建一个PRoducer对象
+        MessageProducer producer = session.createProducer(topic);
+        //创建一个TextMessage对象
+        TextMessage textMessage = session.createTextMessage("hello activemq topic");
+        //发送消息
+        producer.send(textMessage);
+        //关闭资源
+        producer.close();
+        session.close();
+        connection.close();
+    }
+
+    @Test
+    public void testTopicConsumer() throws Exception{
+        //创建一个连接工厂对象
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.25.183:61616");
+        //使用连接工厂对象创建一个连接
+        Connection connection = connectionFactory.createConnection();
+        //开启连接
+        connection.start();
+        //使用连接对象创建一个Session对象
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        //使用Seesion创建一个Destination，Destination应该和消息的发送端一致
+        Topic topic = session.createTopic("test-topic");
+        //使用Session创建一个Consumer对象
+        MessageConsumer consumer = session.createConsumer(topic);
+        //向Consumer对象中设置一个MessageListener对象，用来接收消息
+        consumer.setMessageListener(new MessageListener() {
+            @Override
+            public void onMessage(Message message) {
+                //取消息的内容
+                if (message instanceof TextMessage) {
+                    TextMessage textMessage = (TextMessage) message;
+                    try {
+                        String text = textMessage.getText();
+                        //打印消息内容
+                        System.out.println(text);
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
+        //系统等待接收消息
+        /*while (true) {
+            Thread.sleep(100);
+        }*/
+        System.out.println("topic消费者3.。。。。。");
+        System.in.read();
+        //关闭资源
+        consumer.close();
+        session.close();
+        connection.close();
+    }
+}
