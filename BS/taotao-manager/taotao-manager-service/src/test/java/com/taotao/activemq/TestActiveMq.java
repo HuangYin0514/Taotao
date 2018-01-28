@@ -96,7 +96,7 @@ public class TestActiveMq {
         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
         //创建Destination，应该使用topic
         Topic topic = session.createTopic("test-topic");
-        //创建一个PRoducer对象
+        //创建一个Producer对象
         MessageProducer producer = session.createProducer(topic);
         //创建一个TextMessage对象
         TextMessage textMessage = session.createTextMessage("hello activemq topic");

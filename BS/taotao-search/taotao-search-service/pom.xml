@@ -81,6 +81,11 @@
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
         </dependency>
+        <!--对activeMq的依赖-->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <resources>
