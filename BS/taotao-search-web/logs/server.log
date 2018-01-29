@@ -2005,3 +2005,59 @@ Looking for @ControllerAdvice: WebApplicationContext for namespace 'taotao-searc
 
 [INFO ] 2018-01-28 20:31:41,889 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508)
 FrameworkServlet 'taotao-search-web': initialization completed in 694 ms
+
+
+[WARN ] 2018-01-28 23:48:30,178 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 20001ms for sessionid 0x161389105dd0016
+
+
+[INFO ] 2018-01-28 23:48:30,202 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 20001ms for sessionid 0x161389105dd0016, closing socket connection and attempting reconnect
+
+
+[INFO ] 2018-01-28 23:48:30,308 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2018-01-28 23:48:31,547 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.180/192.168.25.180:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2018-01-28 23:48:31,551 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.180/192.168.25.180:2181, initiating session
+
+
+[INFO ] 2018-01-28 23:48:31,605 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.180/192.168.25.180:2181, sessionid = 0x161389105dd0016, negotiated timeout = 30000
+
+
+[INFO ] 2018-01-28 23:48:31,605 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[WARN ] 2018-01-28 23:48:51,607 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 20001ms for sessionid 0x161389105dd0016
+
+
+[INFO ] 2018-01-28 23:48:51,607 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 20001ms for sessionid 0x161389105dd0016, closing socket connection and attempting reconnect
+
+
+[INFO ] 2018-01-28 23:48:51,707 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2018-01-28 23:48:53,632 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.180/192.168.25.180:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2018-01-28 23:48:53,635 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.180/192.168.25.180:2181, initiating session
+
+
+[INFO ] 2018-01-28 23:48:53,638 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.180/192.168.25.180:2181, sessionid = 0x161389105dd0016, negotiated timeout = 30000
+
+
+[INFO ] 2018-01-28 23:48:53,639 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
