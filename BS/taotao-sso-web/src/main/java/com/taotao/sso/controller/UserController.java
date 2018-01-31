@@ -2,10 +2,14 @@ package com.taotao.sso.controller;
 
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.CookieUtils;
+import com.taotao.common.utils.JsonUtils;
 import com.taotao.pojo.TbUser;
 import com.taotao.sso.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,17 +58,45 @@ public class UserController {
         return result;
     }
 
+/*    @RequestMapping(value = "/user/token/{token}", method = RequestMethod.GET,
+                    //指定返回响应数据的content-type。防止有些浏览器不好使，不能读取json数据。
+                    produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public String getUserByToken(@PathVariable String token, String callback) {
+        TaotaoResult result = userService.getUserByToken(token);
+        //判断是否为jsoup请求
+        if (StringUtils.isNotBlank(callback)) {
+            return callback + "(" + JsonUtils.objectToJson(result) + ")";
+        }
+        return JsonUtils.objectToJson(result);
+    }*/
+
+    //jsonp本质就是给浏览器传递一个js
+    //jsonp的第二种方法，spring4.1以上版本使用
     @RequestMapping(value = "/user/token/{token}", method = RequestMethod.GET)
     @ResponseBody
-    public TaotaoResult getUserByToken(@PathVariable String token) {
+    public Object getUserByToken(@PathVariable String token, String callback) {
         TaotaoResult result = userService.getUserByToken(token);
+        //判断是否为jsoup请求
+        if (StringUtils.isNotBlank(callback)) {
+            MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+            //设置回调方法
+            mappingJacksonValue.setJsonpFunction(callback);
+            return mappingJacksonValue;
+        }
         return result;
     }
 
+
+
+    //注释内容是接口文档要求返回的数据。
+    //为提高简便性。故作一些调整
+    //如果后续有时间需要把taotao-portal-web工程下taotao.js中代码改成ajax方案
     @RequestMapping(value = "/user/logout/{token}", method = RequestMethod.GET)
-    @ResponseBody
-    public TaotaoResult logoutByToken(@PathVariable String token) {
+    /*@ResponseBody*/
+    public String /*TaotaoResult*/ logoutByToken(@PathVariable String token) {
         TaotaoResult result = userService.logoutByToken(token);
-        return result;
+        /*return result;*/
+        return "login";
     }
 }
