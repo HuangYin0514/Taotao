@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/taotao-cart-web" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-common" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-content" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-item-web" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-manager" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/taotao-order" />
+    <file type="web" url="file://$PROJECT_DIR$/taotao-order-web" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-portal-web" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-search" />
     <file type="web" url="file://$PROJECT_DIR$/taotao-search-web" />
@@ -26,6 +29,9 @@
         <option value="$PROJECT_DIR$/taotao-item-web/pom.xml" />
         <option value="$PROJECT_DIR$/taotao-sso/pom.xml" />
         <option value="$PROJECT_DIR$/taotao-sso-web/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-order/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-order-web/pom.xml" />
       </list>
     </option>
   </component>
