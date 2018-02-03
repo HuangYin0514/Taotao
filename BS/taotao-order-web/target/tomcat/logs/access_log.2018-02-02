@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "POST /order/create.html HTTP/1.1" 200 7368 http-bio-8091-exec-1 2799
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /css/purchase.base.2012.css HTTP/1.1" 200 13339 http-bio-8091-exec-7 19
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /css/purchase.sop.css HTTP/1.1" 200 9885 http-bio-8091-exec-8 19
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /js/jquery.cookie.js HTTP/1.1" 200 3121 http-bio-8091-exec-10 36
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /js/base-2011.js HTTP/1.1" 200 29063 http-bio-8091-exec-9 57
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /images/icon48.png HTTP/1.1" 200 391 http-bio-8091-exec-10 8
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:21 +0800] "GET /images/flow.gif HTTP/1.1" 200 818 http-bio-8091-exec-2 11
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:30 +0800] "GET /order/order-cart.html HTTP/1.1" 200 24452 http-bio-8091-exec-5 1026
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:33 +0800] "POST /order/create.html HTTP/1.1" 200 7368 http-bio-8091-exec-5 45
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:41 +0800] "GET /order/order-cart.html HTTP/1.1" 200 24457 http-bio-8091-exec-9 19
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:13:43 +0800] "POST /order/create.html HTTP/1.1" 200 7369 http-bio-8091-exec-9 49
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:19:57 +0800] "POST /order/create.html HTTP/1.1" 200 7369 http-bio-8091-exec-10 54
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:20:06 +0800] "GET /order/order-cart.html HTTP/1.1" 200 24452 http-bio-8091-exec-6 23
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:20:08 +0800] "POST /order/create.html HTTP/1.1" 200 7368 http-bio-8091-exec-6 44
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:20:44 +0800] "GET /user/login.html HTTP/1.1" 404 949 http-bio-8091-exec-10 5

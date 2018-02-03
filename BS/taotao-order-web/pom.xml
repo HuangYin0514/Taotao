@@ -19,7 +19,12 @@
         </dependency>
         <dependency>
             <groupId>com.taotao</groupId>
-            <artifactId>taotao-manager-interface</artifactId>
+            <artifactId>taotao-sso-interface</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao-order-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- Spring -->

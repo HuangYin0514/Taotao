@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:11:58:28 +0800] "GET /search.html?q=iphone6 HTTP/1.1" 200 66709 http-bio-8085-exec-1 5936
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:11:58:28 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8085-exec-2 5
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:12:03:01 +0800] "GET /search.html?q=iPhone6 HTTP/1.1" 200 66709 http-bio-8085-exec-4 158
+0:0:0:0:0:0:0:1 - - [02/Feb/2018:17:10:52 +0800] "GET /search.html?q=iPhone6 HTTP/1.1" 200 66709 http-bio-8085-exec-6 219
