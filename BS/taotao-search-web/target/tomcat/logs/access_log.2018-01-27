@@ -1,6 +1,0 @@
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 9459 http-bio-8085-exec-1 2322
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /css/order-commons.css HTTP/1.1" 200 47486 http-bio-8085-exec-2 4
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /js/order.common.js HTTP/1.1" 200 9499 http-bio-8085-exec-4 7
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /js/jquery.checkout.js HTTP/1.1" 200 13775 http-bio-8085-exec-5 24
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /js/base.js HTTP/1.1" 200 12499 http-bio-8085-exec-3 18
-0:0:0:0:0:0:0:1 - - [27/Jan/2018:17:30:45 +0800] "GET /images/errordog.jpg HTTP/1.1" 200 26691 http-bio-8085-exec-9 3

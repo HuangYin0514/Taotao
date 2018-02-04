@@ -24,6 +24,9 @@
                 <configuration>
                     <path>/</path>
                     <port>8083</port>
+                    <url>http://192.168.25.186:8081/manager/text</url>
+                    <username>tomcat</username>
+                    <password>tomcat</password>
                 </configuration>
             </plugin>
         </plugins>

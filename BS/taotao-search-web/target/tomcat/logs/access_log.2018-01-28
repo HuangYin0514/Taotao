@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:31:45 +0800] "GET /search.html?q=%E5%B0%8F%E7%B1%B3 HTTP/1.1" 200 28063 http-bio-8085-exec-1 4315
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:33:25 +0800] "GET /search.html?q=%E5%A4%8F%E6%99%AE HTTP/1.1" 200 65016 http-bio-8085-exec-3 267
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:33:34 +0800] "GET /search.html?q=%E5%A4%8F%E6%99%AE%204%2064 HTTP/1.1" 200 66792 http-bio-8085-exec-5 241
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:35:11 +0800] "GET /search.html?q=%E5%A4%8F%E6%99%AE%204%2064 HTTP/1.1" 200 66792 http-bio-8085-exec-7 81
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:41:51 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 66063 http-bio-8085-exec-8 217
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:41:54 +0800] "GET /search.html?q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 66063 http-bio-8085-exec-1 73
-0:0:0:0:0:0:0:1 - - [28/Jan/2018:20:42:00 +0800] "GET /search.html?q=iphone%206 HTTP/1.1" 200 66702 http-bio-8085-exec-1 61
