@@ -85,5 +85,12 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
         </dependency>
+        <!--定时器(还需要依赖spring-context-support，上面已经依赖了)-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
+
+
     </dependencies>
 </project>
